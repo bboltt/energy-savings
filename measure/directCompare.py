@@ -1,19 +1,10 @@
 # TODO: 添加功能，区分节能策略运行前后数据源
-
-class User:
-    # TODO: need updated to adapt Client object
-    _persist_methods = ['get', 'save', 'delete']
-
-    def __init__(self, persister):
-        self._persister = persister
-
-    def __getattr__(self, attribute):
-        if attribute in self._persist_methods:
-            return getattr(self._persister, attribute)
-
+import numpy as np
+from numpy.linalg import norm
 
 def direct_compare(sn, date_list:list, k):
     """
+    :param sn:
     :param date_list:
     :param k: number of similar days for each comparing date
     :return:
@@ -28,8 +19,30 @@ def direct_compare(sn, date_list:list, k):
 
 
 def find_similarity_days(sn, date):
+    recall_similar_days()
     historical_data = get_data(sn, date)
     days_pool = pool(historical_data)
+
+def compute_similarity(sn, date_1, date_2):
+    """
+    compute cosine similarity of two given dates
+    :param sn:
+    :param date_1: date_1
+    :param date_2: date_2
+    :return: cosine similarity
+    """
+    vector_1 = get_data(sn, date_1)
+    vector_2 = get_data(sn, date_2)
+    return np.dot(vector_1, vector_2) / (norm(vector_1) * norm(vector_2))
+
+def recall_similar_days(sn, date):
+    get_data(sn, date)
+    similar_days = []
+
+
+
+
+
 
 
 
