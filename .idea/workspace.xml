@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b31fb73-c83c-48f3-b2f2-683900a35548" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/energy-savings.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/get_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/energy_savings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/energy_savings_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/measure/directCompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/measure/directCompare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measure/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/measure/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +129,9 @@
       <workItem from="1630287285567" duration="1081000" />
       <workItem from="1630290003783" duration="2590000" />
       <workItem from="1630294734369" duration="27480000" />
-      <workItem from="1630458147877" duration="15634000" />
+      <workItem from="1630458147877" duration="24176000" />
+      <workItem from="1630892584310" duration="4181000" />
+      <workItem from="1630906807762" duration="18971000" />
     </task>
     <servers />
   </component>

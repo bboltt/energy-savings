@@ -8,6 +8,9 @@ from measure import directCompare
 
 
 class Users:
+    """
+    This is a facade class. The object is used to access all other objects.
+    """
     def __init__(self):
         self.users_id = set()
         self.users_table = {}
@@ -80,7 +83,8 @@ class Client:
         self.historical_data_length = calculate_historical_data_length()
 
     def recommend_method(self):
-        if self.historical_data_length < 365: # more than one year
+        if self.historical_data_length < 365:
+            # more than one year
             self.method = "DirectCompare"
         else:
             self.method = self.check_data_quality()
@@ -153,16 +157,21 @@ def main():
     parser = argparse.ArgumentParser(description="energy savings measurement and visualization")
     parser.add_argument("-m", "--model_path", type=str, help="path to ML model for base expecting method", default=None)
     parser.add_argument("-d", "--data_path", type=str, help="path to saved data", default=None)
-    parser.add_argument("-c", "--command", type=str)
+    parser.add_argument("-c", "--command", type=str, default="run")
     # parser.add_argument("-v", "--verbose", action="store_true")
     # parser.add_argument("-q", "--quiet", action="store_true")
     # parser.add_argument("x", type=int, help="the base")
     # parser.add_argument("y", type=int, help="the exponent")
     args = parser.parse_args()
     print("energy savings manager is launched.")
+    print("""command guide:""")
     if args.command == "init":
         users = Users()
-        return users
+        if not args.d:
+            return users
+        else:
+            users.load(args.d)
+            return users
     if args.command == "run":
         if not args.d:
             print("no saved historical data")
@@ -171,6 +180,10 @@ def main():
             users.load(args.d)
             users.run(list(users.users_id))
             return users
+
+
+def execute():
+    main()
 """
     if in_sudo_mode:
         command = Command(always_authenticated, always_authorized)
@@ -182,4 +195,4 @@ def main():
 """
 
 if __name__ == '__main__':
-    main()
+    execute()
