@@ -157,7 +157,7 @@ def main():
     parser = argparse.ArgumentParser(description="energy savings measurement and visualization")
     parser.add_argument("-m", "--model_path", type=str, help="path to ML model for base expecting method", default=None)
     parser.add_argument("-d", "--data_path", type=str, help="path to saved data", default=None)
-    parser.add_argument("-c", "--command", type=str, default="run")
+    parser.add_argument("-c", "--command", type=str, default="init")
     # parser.add_argument("-v", "--verbose", action="store_true")
     # parser.add_argument("-q", "--quiet", action="store_true")
     # parser.add_argument("x", type=int, help="the base")
@@ -167,13 +167,13 @@ def main():
     print("""command guide:""")
     if args.command == "init":
         users = Users()
-        if not args.d:
+        if not args.data_path:
             return users
         else:
             users.load(args.d)
             return users
     if args.command == "run":
-        if not args.d:
+        if not args.data_path:
             print("no saved historical data")
         else:
             users = Users()
@@ -183,7 +183,9 @@ def main():
 
 
 def execute():
-    main()
+    output = main()
+    print(output)
+    return output
 """
     if in_sudo_mode:
         command = Command(always_authenticated, always_authorized)
