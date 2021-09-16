@@ -1,0 +1,25 @@
+{
+    "sn": "0000CC3112700654B991701000690000",
+    "dataLength": 1, 
+    "data": [
+        {
+            "time": "2021-01-01 10:00:00",
+            "weather": {
+                "temperature": "29.9",
+                "wind_power": "3.0",
+                "relative_humidity": "75.0",
+                "weather": "阴"
+            },
+            "info": {
+                "city": "苏州市",
+                "district": "姑苏区",
+                "project_type": "体育场馆"
+            },
+            "file_path": {
+                "mlModel": "./model/reg.pickle",
+                "encoder": "./model/encoder.pickle",
+                "stats": "./model/stats"
+            }
+        }
+    ]
+}

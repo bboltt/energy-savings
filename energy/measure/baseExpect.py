@@ -1,6 +1,36 @@
 import pickle
+from sklearn import set_config
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.impute import SimpleImputer
+from sklearn.compose import make_column_transformer
+from sklearn.linear_model import Ridge
 #from pyspark.ml import Pipeline
 #from pyspark.ml.feature import OneHotEncoder
+
+from ..data.load_data import load_from_json_file, pandas_feature_data
+
+
+def load_model(model_path):
+    with open(model_path, "rb") as f:
+        model = pickle.load(f)
+    return model
+
+def calculate_energy_base(url):
+    """
+    compute energy base by given json url
+    :param url: api url
+    :return:
+    """
+    data = load_from_json_file(url)
+    df = pandas_feature_data(data)
+    #model
+
+
+if __name__ == '__main__':
+    print(load_model("../model/reg.pickle"))
+
+
 
 
 def predict_baseline(sn):
