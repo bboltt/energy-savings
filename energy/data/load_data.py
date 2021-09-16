@@ -3,12 +3,14 @@ import json
 import os
 import pandas as pd
 
-url = "../docs/inSamples.json"
+#url = "../docs/inSamples.json"
 #%%
 
 
 def load_from_json_file(path):
-    with open(url, encoding="utf-8") as f:
+    #print(path)
+    #print(os.listdir())
+    with open(path, encoding="utf-8") as f:
         data = json.load(f)
     return data
 
@@ -20,11 +22,12 @@ def load_from_url(path):
 
 
 def load_stats(sn, weekday, hour, month):
-    df = pd.read_csv('../stats/avgHourlyEnergyByWeekday.csv')
+    #print(os.listdir())
+    df = pd.read_csv('./stats/avgHourlyEnergyByWeekday.csv')
     avg_energy_weekday = df[(df["sn"] == sn) & (df["weekday"] == weekday)].iloc[0, 2]
-    df = pd.read_csv('../stats/avgHourlyEnergyByHour.csv')
+    df = pd.read_csv('./stats/avgHourlyEnergyByHour.csv')
     avg_energy_hour = df[(df["sn"] == sn) & (df["hour"] == hour)].iloc[0, 2]
-    df = pd.read_csv('../stats/avgHourlyEnergyByMonth.csv')
+    df = pd.read_csv('./stats/avgHourlyEnergyByMonth.csv')
     avg_energy_month = df[(df["sn"] == sn) & (df["month"] == month)].iloc[0, 2]
     return avg_energy_weekday, avg_energy_hour, avg_energy_month
 
@@ -78,7 +81,3 @@ import test
 test.print_test()
 
 """
-#%%
-a = pd.DataFrame()
-a["B"] = 5
-
