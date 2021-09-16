@@ -3,8 +3,9 @@
 #spark
 
 import argparse
-from measure import baseExpect
-from measure import directCompare
+from energy.measure import baseExpect, baseExpect as be
+#from measure import directCompare
+from energy.data import load_data as ld
 
 
 class Users:
@@ -156,8 +157,11 @@ def main():
     # take behavior params
     parser = argparse.ArgumentParser(description="energy savings measurement and visualization")
     parser.add_argument("-m", "--model_path", type=str, help="path to ML model for base expecting method", default=None)
+    parser.add_argument("-s", "--historical_stats_file", type=str, help="path to historical statistics data",
+                        default=None)
     parser.add_argument("-d", "--data_path", type=str, help="path to saved data", default=None)
     parser.add_argument("-c", "--command", type=str, default="init")
+    parser.add_argument("-i", help="input json params")
     # parser.add_argument("-v", "--verbose", action="store_true")
     # parser.add_argument("-q", "--quiet", action="store_true")
     # parser.add_argument("x", type=int, help="the base")
@@ -165,6 +169,24 @@ def main():
     args = parser.parse_args()
     print("energy savings manager is launched.")
     print("""command guide:""")
+
+    # implement base compare method below
+    return be.calculate_energy_base(args.i)
+
+
+    inputs = ld.load_from_json_file(args.i)
+    machine = Client(inputs["sn"])
+    input_data = inputs["data"]
+    machine.load_directCompare_data()
+    machine.predict()
+    return machine.baseline
+
+
+    #ld.load_from_url()
+
+
+
+
     if args.command == "init":
         users = Users()
         if not args.data_path:
@@ -181,11 +203,6 @@ def main():
             users.run(list(users.users_id))
             return users
 
-
-def execute():
-    output = main()
-    print(output)
-    return output
 """
     if in_sudo_mode:
         command = Command(always_authenticated, always_authorized)
@@ -196,5 +213,12 @@ def execute():
     pass
 """
 
+#%%
+
+
+
+
+
+#%%
 if __name__ == '__main__':
-    execute()
+    main()

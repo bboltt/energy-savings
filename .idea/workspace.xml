@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b31fb73-c83c-48f3-b2f2-683900a35548" name="Default Changelist" comment="" />
+    <list default="true" id="6b31fb73-c83c-48f3-b2f2-683900a35548" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/inOutSamples.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/inSamples.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/energy/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/energy/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/energy/data/inSamples.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/energy/data/load_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/energy/data/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/energy/data/test_one.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/energy/data/testprint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/energy/measure/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/avgHourlyEnergyByHour.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/avgHourlyEnergyByMonth.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/avgHourlyEnergyByWeekday.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_one.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/testprint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/get_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/energy_savings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/energy_savings_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measure/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/energy/measure/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measure/baseExpect.py" beforeDir="false" afterPath="$PROJECT_DIR$/energy/measure/baseExpect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measure/directCompare.py" beforeDir="false" afterPath="$PROJECT_DIR$/energy/measure/directCompare.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,14 +58,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/energy/data" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\energyManagement\energy-savings\energy\data" />
+      <recent name="D:\energyManagement\energy-savings" />
+      <recent name="D:\energyManagement\energy-savings\data" />
+      <recent name="D:\energyManagement\energy-savings\doc" />
       <recent name="D:\能源管理\energy-savings\model" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\energyManagement\energy-savings\energy" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.get_data">
+  <component name="RunManager" selected="Python.baseExpect">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="energy-savings" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -62,29 +95,45 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="energy_savings_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="baseExpect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="energy-savings" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/measure" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/energy_savings_manager.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/measure/baseExpect.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="load_data (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="energy-savings" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/load_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="load_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="energy-savings" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -97,7 +146,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/get_data.py" />
+      <option name="SCRIPT_NAME" value="D:\energyManagement\energy-savings\data\load_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -106,10 +155,57 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_one (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="energy-savings" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/test_one.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_one" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="energy-savings" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_one.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.get_data" />
-        <item itemvalue="Python.energy_savings_manager" />
+        <item itemvalue="Python.baseExpect" />
+        <item itemvalue="Python.load_data (1)" />
+        <item itemvalue="Python.test_one (1)" />
+        <item itemvalue="Python.test_one" />
+        <item itemvalue="Python.load_data" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +223,13 @@
       <workItem from="1630294734369" duration="27480000" />
       <workItem from="1630458147877" duration="24176000" />
       <workItem from="1630892584310" duration="4181000" />
-      <workItem from="1630906807762" duration="21830000" />
+      <workItem from="1630906807762" duration="22642000" />
+      <workItem from="1631085375218" duration="2649000" />
+      <workItem from="1631261584429" duration="4036000" />
+      <workItem from="1631497802308" duration="14750000" />
+      <workItem from="1631590520826" duration="11253000" />
+      <workItem from="1631667139833" duration="448000" />
+      <workItem from="1631669918261" duration="25342000" />
     </task>
     <servers />
   </component>
